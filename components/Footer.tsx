@@ -4,7 +4,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className='fixed bottom-0 w-full mx-auto py-10 px-10 grid lg:grid-cols-2 gap-10 mt-10 bg-matcha dark:bg-sage text-cream dark:text-darkbrown '>
+    <div className=' bottom-0 w-full mx-auto py-10 px-10 grid lg:grid-cols-2 gap-10 mt-10 bg-matcha dark:bg-sage text-cream dark:text-darkbrown '>
       <div>
         <h1 className='w-full text-sm font-IBM_Plex_Mono'>Built with Nextjs by <Link href="/"><b><span className="footer-name">Thashin Bhuiyan</span></b></Link></h1>
       </div>
