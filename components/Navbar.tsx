@@ -26,15 +26,15 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className="bg-sage dark:bg-matcha text-darkbrown dark:text-cream p-4 shadow-md">
-      <div className="container mx-auto flex justify-between items-center">
+    <nav className="bg-sage dark:bg-matcha text-darkbrown dark:text-cream py-4 ">
+      <div className="container px-10 w-full flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="text-2xl tracking-wide font-Bebas_Neue">
           THASHIN BHUIYAN
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="space-x-6 hidden md:flex font-IBM_Plex_Mono items-center">
+        <div className="absolute end-10 space-x-6 hidden md:flex font-IBM_Plex_Mono items-center">
           <Link href="/" className="link-hover transition">
             HOME
           </Link>

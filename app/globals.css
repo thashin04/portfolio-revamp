@@ -5,6 +5,11 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  transition:
+  color .07s,
+  background-color 0.7s;
+}
 
 .bebas-neue-regular {
   font-family: "Bebas Neue", sans-serif;
@@ -42,8 +47,38 @@
   font-weight: 700;
   font-style: italic;
 }
+.btn:hover{
+  transform: translateY(-3px);
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 5px rgba(117, 109, 109, 0.5);
+}
+.dark .btn{
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.btn{
+  transition: all 0.5s ease;
+}
 
-/* Custom styles for the links */
+.btn-1{
+  background-color: none;
+  color:#434E16;
+  box-shadow: inset 0 0 0 0 #59671D;
+  transition: ease-out 0.3s;
+}
+.btn-1:hover{
+  box-shadow: inset 0px 50px 0px 0px #BABB9B;
+}
+
+.dark .btn-1{
+  background-color: none;
+  color:#BABB9B;
+  box-shadow: inset 0 0 0 0 #394413;
+  transition: ease-out 0.3s;
+}
+.dark .btn-1:hover{
+  box-shadow: inset 0px 50px 0px 0px #434E16;
+}
+
 .link-hover::after {
   content: '';
   display: block;
@@ -66,7 +101,14 @@
   background-color: #E7E3DA;
 }
 
+.footer-name{
+  text-decoration: underline wavy 0.15em rgba(0, 0, 0, 0);
+}
 
+.footer-name:hover {
+  text-decoration: underline wavy;
+  transition: all 0.3s ease;
+}
 
 body {
   background-color: #E7E3DA; /* Light mode background */
