@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className="bg-sage dark:bg-matcha text-darkbrown dark:text-cream p-4 sticky top-0">
       <div className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="text-2xl 2xl:text-3xl tracking-wide font-Bebas_Neue">
+        <Link href="/" className=" text-2xl 2xl:text-4xl tracking-wide font-Bebas_Neue">
           THASHIN BHUIYAN
         </Link>
 

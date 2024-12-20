@@ -121,3 +121,7 @@ body {
   color: #E7E3DA;
 }
 
+html, body{
+  scroll-behavior:smooth;
+}
+
