@@ -142,11 +142,11 @@ function Home() {
     </div>
 
     <div className="w-full flex flex-wrap lg:flex-row flex-col lg:px-32 xl:px-48 2xl:px-56 sm:px-8 max-sm:px-8 2xl:max-w-max 2xl:mx-auto space-y-4 lg:space-y-0 lg:space-x-12 pt-12 xl:pt-100 pb-0">
-      <div className=" text-darkbrown dark:text-cream  flex-1 lg:order-1 order-2 mx-auto overflow-hidden ">
+      <div className=" text-darkbrown dark:text-cream  flex-1 lg:order-1 order-2 min-[500px]:mx-auto overflow-hidden ">
         <h1 id="#project-section" className="leading-tight font-Bebas_Neue md:pb-0  lg:text-left text-5xl 2xl:text-6xl">
           PROJECTS
         </h1>
-        <div id="#project-section" className="max-sm:grid gap-4 sm:space-x-4 px-2 font-IBM_Plex_Mono justify-center mt-4 mb-8 max-sm:grid-cols-2 max-sm:px-2">
+        <div id="#project-section" className="max-[500px]:grid max-[500px]:w-full gap-4 2xl:text-2xl min-[501px]:space-x-4 px-2 font-IBM_Plex_Mono justify-center mt-4 mb-8 max-[500px]:grid-cols-2 max-[500px]:px-2">
           {["All", "Web Dev", "Game Art", "Design"].map((tag) => (
             <button
               key={tag}
@@ -162,38 +162,40 @@ function Home() {
             ))}
           </div>
 
-          <div className="w-full max-sm:mx-auto grid grid-cols-1 font-IBM_Plex_Mono lg:grid-cols-2 xl:grid-cols-3 gap-8 px-6">
+          <div className="w-full max-sm:mx-auto grid grid-cols-1 font-IBM_Plex_Mono lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-8 px-6 2xl:gap-20 2xl:px-20 2xl:mx-4">
             {filteredProjects.map((project) => (
               <div
                 key={project.id}
-                className="border border-matcha dark:border-sage  dark:bg-matcha bg-sage rounded-lg overflow-hidden shadow-lg"
+                className="border border-matcha dark:border-sage dark:bg-matcha bg-sage rounded-lg overflow-hidden shadow-lg 2xl:p-6"
+                style={{ width: '100%', height: 'auto' }}
               >
                 <div className="h-[107px] w-[175px] mx-auto py-4">
                   <Image
                     src={project.image}
                     alt={project.title}
-                    width={175}
-                    height={400}
-                    className="w-full h-full object-cover"
+                    width={300} 
+                    height={500} 
+                    className="w-full h-full  object-cover"
                   />
                 </div>
-                <div className="p-4 text-darkbrown dark:text-cream">
-                  <h2 className="font-Bebas_Neue text-2xl mb-2">{project.title}</h2>
+                <div className="p-4 text-darkbrown dark:text-cream 2xl:p-6">
+                  <h2 className="font-Bebas_Neue text-2xl 2xl:text-3xl mb-2">{project.title}</h2>
                   <div className="flex space-x-2 mb-2">
                     {project.tags.map((tag, index) => (
                       <span
                         key={index}
-                        className="px-2 py-0.5 text-xs font-[600] rounded-full border border-matcha text-cream dark:border-cream dark:text-matcha dark:bg-sage bg-matcha"
+                        className="px-2 py-0.5 text-xs font-[600] rounded-full border border-matcha text-cream dark:border-cream dark:text-matcha dark:bg-sage bg-matcha 2xl:text-sm 2xl:px-4"
                       >
                         {tag}
                       </span>
                     ))}
-                  </div>
-                  <p className="font-IBM_Plex_Mono text-sm">{project.description}</p>
-                </div>
-              </div>
-            ))}
+        </div>
+        <p className="font-IBM_Plex_Mono text-sm 2xl:text-base">{project.description}</p>
+      </div>
+    </div>
+  ))}
           </div>
+
 
 
       </div>
