@@ -36,7 +36,10 @@
   font-weight: 700;
   font-style: normal;
 }
-
+.wavy-decoration{
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
 .ibm-plex-mono-regular-italic {
   font-family: "IBM Plex Mono", monospace;
   font-weight: 400;
@@ -80,6 +83,15 @@
   box-shadow: inset 0px 50px 0px 0px #434E16;
 }
 
+.btn-2:hover{
+  transform: translateY(-3px);
+  transition: all 0.3s ease;
+}
+
+.btn-2{
+  transition: all 0.5s ease;
+}
+
 .link-hover::after {
   content: '';
   display: block;
@@ -104,11 +116,13 @@
 
 .footer-name{
   text-decoration: underline wavy 0.15em rgba(0, 0, 0, 0);
+  text-underline-offset: 2px;
 }
 
 .footer-name:hover {
   text-decoration: underline wavy;
   transition: all 0.3s ease;
+  text-underline-offset: 2px;
 }
 
 body {

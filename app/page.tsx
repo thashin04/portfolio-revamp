@@ -122,7 +122,7 @@ function Home() {
           <Image
             alt="Day"
             src={day}
-            className="rounded-xl dark:hidden transition-opacity duration-500 opacity-100 dark:opacity-0"
+            className="rounded-xl dark:hidden transition-opacity opacity-100 dark:opacity-0"
             style={{
               width: "100%",
               height: "auto",
@@ -131,7 +131,7 @@ function Home() {
           <Image
             alt="Night"
             src={night}
-            className="rounded-xl hidden dark:list-item transition-opacity duration-500 opacity-0 dark:opacity-100"
+            className="rounded-xl hidden dark:list-item transition-opacity  opacity-0 dark:opacity-100"
             style={{
               width: "100%",
               height: "auto",
@@ -141,8 +141,8 @@ function Home() {
       </div>
     </div>
 
-    <div className="w-full flex flex-wrap lg:flex-row flex-col lg:px-32 xl:px-48 2xl:px-56 sm:px-8 max-sm:px-8 2xl:max-w-max 2xl:mx-auto space-y-4 lg:space-y-0 lg:space-x-12 pt-12 xl:pt-100 pb-0">
-      <div className=" text-darkbrown dark:text-cream  flex-1 lg:order-1 order-2 min-[500px]:mx-auto overflow-hidden ">
+    <div className="md:pb-8 w-full flex flex-wrap lg:flex-row flex-col lg:px-32 xl:px-48 2xl:px-56 sm:px-8 max-sm:px-8 2xl:max-w-max 2xl:mx-auto space-y-4 lg:space-y-0 lg:space-x-12 pt-12 xl:pt-100 pb-0">
+      <div className=" text-darkbrown dark:text-cream flex-1 lg:order-1 order-2 min-[500px]:mx-auto overflow-hidden ">
         <h1 id="#project-section" className="leading-tight font-Bebas_Neue md:pb-0  lg:text-left text-5xl 2xl:text-6xl">
           PROJECTS
         </h1>
@@ -150,7 +150,7 @@ function Home() {
           {["All", "Web Dev", "Game Art", "Design"].map((tag) => (
             <button
               key={tag}
-              className={`px-4 py-1 duration-300 rounded-full border ${
+              className={`px-4 py-1 rounded-full border ${
                 selectedFilter === tag
                   ? "dark:bg-matcha bg-sage text-darkbrown dark:text-cream"
                   : "border-matcha dark:bg-cream bg-darkbrown text-cream dark:text-darkbrown hover:bg-matcha dark:hover:bg-sage hover:text-cream"
@@ -169,17 +169,19 @@ function Home() {
                 className="border border-matcha dark:border-sage dark:bg-matcha bg-sage rounded-lg overflow-hidden shadow-lg 2xl:p-6"
                 style={{ width: '100%', height: 'auto' }}
               >
-                <div className="h-[107px] w-[175px] mx-auto py-4">
+                <div className="dark:bg-sage bg-cream border-sage border-8 rounded-xl dark:border-matcha">
+                <div className="h-[107px] w-[175px] mx-auto py-4 ">
                   <Image
                     src={project.image}
                     alt={project.title}
                     width={300} 
                     height={500} 
-                    className="w-full h-full  object-cover"
+                    className="w-full h-full object-cover"
                   />
                 </div>
+                </div>
                 <div className="p-4 text-darkbrown dark:text-cream 2xl:p-6">
-                  <h2 className="font-Bebas_Neue text-2xl 2xl:text-3xl mb-2">{project.title}</h2>
+                  <h2 className="font-Bebas_Neue leading-relaxed text-2xl 2xl:text-3xl mb-2">{project.title}</h2>
                   <div className="flex space-x-2 mb-2">
                     {project.tags.map((tag, index) => (
                       <span
