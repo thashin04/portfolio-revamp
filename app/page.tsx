@@ -94,7 +94,7 @@ function Home() {
       </div>
     <div className="w-full flex flex-wrap lg:flex-row flex-col lg:px-32 xl:px-48 2xl:px-56 sm:px-8 max-sm:px-8 2xl:max-w-max 2xl:mx-auto space-y-4 lg:space-y-0 lg:space-x-12 pt-2 xl:pt-20 pb-12 max-lg:pb-4 2xl:pb-24">
       <div className=" text-darkbrown dark:text-cream flex-1 lg:order-1 order-2 lg:pr-12 mx-auto overflow-hidden ">
-        <h1 className="leading-tight font-Bebas_Neue md:pb-0 lg:text-left text-5xl 2xl:text-6xl">
+        <h1 className="leading-tight font-Bebas_Neue md:pb-0 lg:text-left max-sm:text-4xl max-sm:pb-4 text-5xl 2xl:text-6xl">
           HELLO! <br /> I'M{" "}
           <span className="text-matcha dark:text-sage">THASHIN :)</span>
         </h1>

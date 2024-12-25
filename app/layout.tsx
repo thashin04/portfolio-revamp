@@ -1,22 +1,10 @@
-import type { Metadata } from "next";
+'use client'
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { useState, useEffect } from "react";
+import "../components/PageWrapper";
 
-export const metadata: Metadata = {
-  title: "Thashin Bhuiyan",
-  description: "Thashin Bhuiyan is a Information Technology and Digital Media Undergrad at the University of Central Florida",
-  keywords: [ "UX/UI",
-              "Frontend Developer",
-              "Developer",
-              "Information Technology",
-              "Thashin",
-              "Thashin Bhuiyan",
-              "Portfolio",
-              "UCF",
-              "University of Central Florida",
-  ],
-};
 
 export default function RootLayout({
   children,
@@ -27,7 +15,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar />
-        {children}
+        <PageWrapper>{children}</PageWrapper> {/* Fade logic in client component */}
         <Footer />
       </body>
     </html>
