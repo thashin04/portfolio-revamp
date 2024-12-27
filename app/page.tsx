@@ -9,6 +9,8 @@ import game1 from "../public/pumpkin-export-export.png";
 import game2 from "../public/kraken-goon-export.png";
 import fuji from "../public/fuji-walk-2.gif"
 
+import { FaExternalLinkAlt } from "react-icons/fa";
+
 const projects = [
   {
     id: 1,
@@ -56,47 +58,47 @@ const projects = [
 
 function Home() {
   const [selectedFilter, setSelectedFilter] = useState("All");
-  const [currentTime, setCurrentTime] = useState("");
+  const [typingText, setTypingText] = useState(""); // State for typing effect
+  const [cursorVisible, setCursorVisible] = useState(true); // State for cursor visibility
+  const fullText = "    THASHIN :)"; // Complete text to display
+  const typingSpeed = 150; // Typing speed in milliseconds
+  const cursorBlinkSpeed = 500; // Cursor blink speed in milliseconds
 
   const filteredProjects = projects.filter((project) =>
     selectedFilter === "All" || project.tags.includes(selectedFilter)
   );
 
   useEffect(() => {
-    const updateTime = () => {
-      const now = new Date();
-
-      let hours = now.getHours();
-      const minutes = now.getMinutes();
-      const seconds = now.getSeconds();
-      const ampm = hours >= 12 ? "PM" : "AM";
-
-      hours = hours % 12 || 12;
-
-      const formattedTime = `${hours}:${minutes.toString().padStart(2, "0")}:${seconds
-        .toString()
-        .padStart(2, "0")} ${ampm} (EST)`;
-
-      setCurrentTime(formattedTime);
-    };
-
-    const intervalId = setInterval(updateTime, 1000);
-
-    updateTime();
-
-    return () => clearInterval(intervalId);
+    let index = 0;
+    const typeInterval = setInterval(() => {
+      if (index < fullText.length) {
+        setTypingText((prev) => prev + fullText.charAt(index));
+        index++;
+      } else {
+        clearInterval(typeInterval);
+      }
+    }, typingSpeed);
+    
+    return () => clearInterval(typeInterval); // Cleanup on unmount
   }, []);
+
+  useEffect(() => {
+    const blinkInterval = setInterval(() => {
+      setCursorVisible((prev) => !prev);
+    }, cursorBlinkSpeed);
+    
+    return () => clearInterval(blinkInterval); // Cleanup on unmount
+  }, []);
+
 
   return (
     <>
-      <div id="local-time" className="justify-end flex font-Bebas_Neue font-white px-10 py-5 border-r-2 max-sm:px-8 max-sm:pb-0  text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
-        {currentTime || "Loading time..."}
-      </div>
-    <div className="w-full flex flex-wrap lg:flex-row flex-col lg:px-32 xl:px-48 2xl:px-56 sm:px-8 max-sm:px-8 2xl:max-w-max 2xl:mx-auto space-y-4 lg:space-y-0 lg:space-x-12 pt-2 xl:pt-20 pb-12 max-lg:pb-4 2xl:pb-24">
+    <div className="w-full flex flex-wrap lg:flex-row flex-col lg:px-32 xl:px-48 2xl:px-56 sm:px-8 max-sm:px-8 2xl:max-w-max 2xl:mx-auto space-y-4 lg:space-y-0 lg:space-x-12 pt-2 max-xl:pt-12 xl:pt-20 pb-12 max-lg:pb-4 2xl:pb-24">
       <div className=" text-darkbrown dark:text-cream flex-1 lg:order-1 order-2 lg:pr-12 mx-auto overflow-hidden ">
-        <h1 className="leading-tight font-Bebas_Neue md:pb-0 lg:text-left max-sm:text-4xl max-sm:pb-4 text-5xl 2xl:text-6xl">
-          HELLO! <br /> I'M{" "}
-          <span className="text-matcha dark:text-sage">THASHIN :)</span>
+        <h1 className="leading-tight font-Bebas_Neue md:pb-0 lg:text-left max-sm:pb-4 text-5xl 2xl:text-6xl">
+        HELLO! <br /> I'M{" "}
+            <span className="text-matcha dark:text-sage">{typingText}</span><span className="text-matcha dark:text-sage -mx-2">{cursorVisible ? '|' : ' '}</span>
+
         </h1>
         <p className="leading-relaxed font-IBM_Plex_Mono max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl text-left 2xl:text-2xl 2xl:pt-4 2xl:pb-6">
           Welcome to my website! I'm an Information Technology Undergrad with a
@@ -142,7 +144,7 @@ function Home() {
     </div>
 
     <div className="md:pb-8 w-full flex flex-wrap lg:flex-row flex-col lg:px-32 xl:px-48 2xl:px-56 sm:px-8 max-sm:px-8 2xl:max-w-max 2xl:mx-auto space-y-4 lg:space-y-0 lg:space-x-12 pt-12 xl:pt-100 pb-0">
-      <div className=" text-darkbrown dark:text-cream flex-1 lg:order-1 order-2 min-[500px]:mx-auto overflow-hidden ">
+      <div className=" text-darkbrown dark:text-sage flex-1 lg:order-1 order-2 min-[500px]:mx-auto overflow-hidden ">
         <h1 id="#project-section" className="leading-tight font-Bebas_Neue md:pb-0  lg:text-left text-5xl 2xl:text-6xl">
           PROJECTS
         </h1>
@@ -166,7 +168,7 @@ function Home() {
             {filteredProjects.map((project) => (
               <div
                 key={project.id}
-                className="border border-matcha dark:border-sage dark:bg-matcha bg-sage rounded-lg overflow-hidden shadow-lg 2xl:p-6"
+                className="border  dark:bg-matcha bg-sage rounded-lg overflow-hidden shadow-xl 2xl:p-6"
                 style={{ width: '100%', height: 'auto' }}
               >
                 <div className="dark:bg-sage bg-cream border-sage border-8 rounded-xl dark:border-matcha">
@@ -181,7 +183,10 @@ function Home() {
                 </div>
                 </div>
                 <div className="p-4 text-darkbrown dark:text-cream 2xl:p-6">
-                  <h2 className="font-Bebas_Neue leading-relaxed text-2xl 2xl:text-3xl mb-2">{project.title}</h2>
+                  <h2 className="flex font-Bebas_Neue leading-relaxed text-2xl 2xl:text-3xl mb-2">{project.title}
+                  <FaExternalLinkAlt 
+                  className={`pl-2 xl:size-5 2xl:size-6 cursor-pointer dark:text-sage text-matcha
+                  }`}/></h2>
                   <div className="flex space-x-2 mb-2">
                     {project.tags.map((tag, index) => (
                       <span

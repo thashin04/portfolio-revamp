@@ -58,7 +58,7 @@ function About() {
       </div>
 
       <div className="text-cream lg:px-12 sm:px-8 space-y-0 max-sm:space-y-2 flex flex-col lg:items-start pt-0">
-            <h1 className="max-sm:text-4xl md:pb-4 font-Bebas_Neue text-center lg:text-left text-5xl 2xl:text-6xl dark:text-cream text-darkbrown">ABOUT ME</h1>
+            <h1 className="pb-2 font-Bebas_Neue text-center lg:text-left text-5xl 2xl:text-6xl dark:text-sage text-matcha">ABOUT ME</h1>
               <p className="max-md:mx-12 font-IBM_Plex_Mono leading-relaxed dark:text-cream text-darkbrown xl:max-w-2xl max-xl:max-w-sm text-left 2xl:text-2xl"> 
                 I am currently A junior Information Technology Major with my minor in Digital Media at the University of Central Florida. I am always learning to find new ideas to bring accessibility to others. I am currently a UI/UX intern at <a href="https://limbitless-solutions.org/" target="blank" className="dark:text-sage text-matcha font-bold wavy-decoration"> Limbitless Solutions</a> and a Web Designer for UCF's <a href="https://osi.ucf.edu/" target="blank" className="dark:text-sage font-bold text-matcha wavy-decoration"> Office of Student Involvement.</a> In my free time I like to draw, cook, go to new cafes, and play stardew valley!
               </p>
@@ -95,8 +95,8 @@ function About() {
       </div>
     </div>
 
-  <div className="py-8 lg:w-3/4 mx-auto mt-6">
-    <h1 className="max-sm:text-4xl text-5xl 2xl:text-6xl font-Bebas_Neue text-center dark:text-cream text-darkbrown mb-6">SKILLS</h1>
+  <div className="py-8 lg:w-3/4 mx-auto max-sm:pt-0 sm:mt-6">
+    <h1 className="text-5xl 2xl:text-6xl font-Bebas_Neue text-center dark:text-sage text-matcha mb-6">SKILLS</h1>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-20 mx-4 max-sm:mx-16 sm:mx-28">
       {/* Languages */}
       <div className="text-center">

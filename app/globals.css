@@ -12,19 +12,6 @@
   background-color 0.7s;
 }
 
-.fade-in {
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .bebas-neue-regular {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
@@ -125,6 +112,13 @@
 
 .dark .link-hover::after {
   background-color: #E7E3DA;
+}
+
+.link-hover:hover::after,
+.link-hover.underline::after {
+  width: 100%; /* Full underline on hover or active page */
+  left: 0;
+  transform: none;
 }
 
 .footer-name{

@@ -1,13 +1,15 @@
-'use client';
+"use client";
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
+import { usePathname } from "next/navigation";
 
 const Navbar: React.FC = () => {
   const [nav, setNav] = useState(false); // State for mobile nav
   const [isDarkMode, setDarkMode] = useState(false); // State for dark mode
+  const pathname = usePathname(); // Get current pathname
 
   const handleNav = () => {
     setNav(!nav);
@@ -15,7 +17,7 @@ const Navbar: React.FC = () => {
 
   const toggleDarkMode = (checked: boolean) => {
     setDarkMode(checked);
-    document.documentElement.classList.toggle("dark", checked); // Add 'dark' class to <html> when enabled
+    document.documentElement.classList.toggle("dark", checked);
   };
 
   useEffect(() => {
@@ -28,18 +30,33 @@ const Navbar: React.FC = () => {
   return (
     <nav className="bg-sage dark:bg-matcha text-darkbrown dark:text-cream p-4 sticky top-0 z-[9999]">
       <div className="container mx-auto flex justify-between items-center">
-        <Link href="/" className=" text-2xl 2xl:text-4xl tracking-wide font-Bebas_Neue">
+        <Link href="/" className="text-2xl 2xl:text-4xl tracking-wide font-Bebas_Neue">
           THASHIN BHUIYAN
         </Link>
 
         <div className="space-x-6 hidden md:flex 2xl:text-xl font-IBM_Plex_Mono items-center">
-          <Link href="/" className="link-hover transition">
+          <Link
+            href="/"
+            className={`link-hover transition ${
+              pathname === "/" ? "underline underline-offset-[7px]" : ""
+            }`}
+          >
             HOME
           </Link>
-          <Link href="/about" className="link-hover transition">
+          <Link
+            href="/about"
+            className={`link-hover transition ${
+              pathname === "/about" ? "underline underline-offset-[7px]" : ""
+            }`}
+          >
             ABOUT
           </Link>
-          <Link href="/work" className="link-hover transition">
+          <Link
+            href="/work"
+            className={`link-hover transition ${
+              pathname === "/work" ? "underline underline-offset-[7px]" : ""
+            }`}
+          >
             WORK
           </Link>
 
@@ -102,7 +119,7 @@ const Navbar: React.FC = () => {
           />
         </li>
 
-        <li className="absolute bottom-12 ">
+        <li className="absolute max-[350px]:text-sm bottom-12 ">
           <a className="footer-name" href="https://www.linkedin.com/in/thashin04/" target="blank">
             LINKEDIN
           </a>{" "}
@@ -113,6 +130,10 @@ const Navbar: React.FC = () => {
           ·{" "}
           <a className="footer-name" href="https://github.com/thashin04" target="blank">
             GITHUB
+          </a>
+          ·{" "}
+          <a className="footer-name" href="https://github.com/thashin04" target="blank">
+            RESUME
           </a>
         </li>
       </ul>

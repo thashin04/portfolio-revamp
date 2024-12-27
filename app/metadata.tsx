@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Thashin Bhuiyan",
-  description: "Thashin Bhuiyan is an Information Technology and Digital Media Undergrad at the University of Central Florida",
+  description:
+    "Thashin Bhuiyan is an Information Technology and Digital Media Undergrad at the University of Central Florida",
   keywords: [
     "UX/UI",
     "Frontend Developer",
