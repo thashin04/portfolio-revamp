@@ -91,7 +91,12 @@
 .btn-2{
   transition: all 0.5s ease;
 }
-
+hr.solid {
+  border-top: 1px solid #59671D;
+}
+.dark hr.solid {
+  border-top: 1px solid #BABB9B;
+}
 .link-hover::after {
   content: '';
   display: block;
@@ -108,6 +113,11 @@
 .link-hover:focus::after {
   opacity: 1;
   transform: scaleX(1);
+}
+.work-shadow:hover {
+  box-shadow: 
+    0px 20px 20px -25px #1a1610,
+    0px -20px 20px -25px #1a1610;
 }
 
 .dark .link-hover::after {

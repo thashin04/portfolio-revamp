@@ -124,7 +124,7 @@ function Home() {
           <Image
             alt="Day"
             src={day}
-            className="rounded-xl dark:hidden transition-opacity opacity-100 dark:opacity-0"
+            className="rounded-xl dark:hidden duration-300 transition-opacity opacity-100 dark:opacity-0"
             style={{
               width: "100%",
               height: "auto",
@@ -133,7 +133,7 @@ function Home() {
           <Image
             alt="Night"
             src={night}
-            className="rounded-xl hidden dark:list-item transition-opacity  opacity-0 dark:opacity-100"
+            className="rounded-xl hidden dark:list-item duration-300 transition-opacity  opacity-0 dark:opacity-100"
             style={{
               width: "100%",
               height: "auto",
