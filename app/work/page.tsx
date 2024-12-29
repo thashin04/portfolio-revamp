@@ -1,6 +1,5 @@
 'use client';
 import Image from "next/image";
-import { FaExternalLinkAlt } from "react-icons/fa";
 import limbitless from "../../public/Limbitless Logos_LS Full Primary.svg";
 import osi from "../../public/UILexternal_KGrgb_Office of Student Involvement-72dpi.png"
 import acm from "../../public/acm-logo.png"

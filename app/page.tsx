@@ -5,9 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 import day from "../public/day.png";
 import night from "../public/night.png";
-import game1 from "../public/pumpkin-export-export.png";
-import game2 from "../public/kraken-goon-export.png";
-import fuji from "../public/fuji-walk-2.gif"
 
 import { FaExternalLinkAlt } from "react-icons/fa";
 
