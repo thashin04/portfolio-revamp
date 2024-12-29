@@ -18,7 +18,7 @@ function Work() {
           <a href="https://limbitless-solutions.org/" className="cursor-pointer" target="_blank">
             <div className="mx-auto md:w-10/12 flex flex-col md:flex-row-reverse md:space-x-8 md:space-x-reverse pb-8">
               {/* Image Section */}
-              <div className="flex items-center justify-center p-6  h-30 bg-sage rounded-lg">
+              <div className="flex items-center justify-center p-6  h-30 dark:bg-sage rounded-lg">
               <Image
             alt="Limbitless Logo"
             src={limbitless}
@@ -52,7 +52,7 @@ function Work() {
           <a href="https://osi.ucf.edu/" className="cursor-pointer" target="_blank">
             <div className="mx-auto md:w-10/12 flex flex-col md:flex-row-reverse md:space-x-8 md:space-x-reverse pb-8">
               {/* Image Section */}
-              <div className="flex items-center justify-center p-6 h-30 bg-sage rounded-lg">
+              <div className="flex items-center justify-center p-6 h-30 dark:bg-sage rounded-lg">
               <Image
             alt="OSI Logo"
             src={osi}
@@ -84,7 +84,7 @@ function Work() {
           <hr className="solid mx-auto md:w-10/12" /><br />
           <div className="mx-auto md:w-10/12 flex flex-col md:flex-row-reverse md:space-x-8 md:space-x-reverse pb-8">
             {/* Image Section */}
-            <div className="flex items-center justify-center px-6 h-30 bg-sage rounded-lg">
+            <div className="flex items-center justify-center px-6 h-30 dark:bg-sage rounded-lg">
               <Image
             alt="ACM Logo"
             src={acm}
