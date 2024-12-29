@@ -164,44 +164,45 @@ function Home() {
             ))}
           </div>
 
-          <div className="w-full max-sm:mx-auto grid grid-cols-1 font-IBM_Plex_Mono lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-8 px-6 2xl:gap-20 2xl:px-20 2xl:mx-4">
-            {filteredProjects.map((project) => (
-              <div
-                key={project.id}
-                className="border  dark:bg-matcha bg-sage rounded-lg overflow-hidden shadow-xl 2xl:p-6"
-                style={{ width: '100%', height: 'auto' }}
-              >
-                <div className="dark:bg-sage bg-cream border-sage border-8 rounded-xl dark:border-matcha">
-                <div className="h-[107px] w-[175px] mx-auto py-4 ">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    width={300} 
-                    height={500} 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                </div>
-                <div className="p-4 text-darkbrown dark:text-cream 2xl:p-6">
-                  <h2 className="flex font-Bebas_Neue leading-relaxed text-2xl 2xl:text-3xl mb-2">{project.title}
-                  <FaExternalLinkAlt 
-                  className={`pl-2 xl:size-5 2xl:size-6 cursor-pointer dark:text-sage text-matcha
-                  }`}/></h2>
-                  <div className="flex space-x-2 mb-2">
-                    {project.tags.map((tag, index) => (
-                      <span
-                        key={index}
-                        className="px-2 py-0.5 text-xs font-[600] rounded-full border border-matcha text-cream dark:border-cream dark:text-matcha dark:bg-sage bg-matcha 2xl:text-sm 2xl:px-4"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-        </div>
-        <p className="font-IBM_Plex_Mono text-sm 2xl:text-base">{project.description}</p>
-      </div>
-    </div>
-  ))}
+            <div className="w-full max-sm:mx-auto grid grid-cols-1 font-IBM_Plex_Mono lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-8 px-6 2xl:gap-20 2xl:px-20 2xl:mx-4">
+              {filteredProjects.map((project) => (
+                <div
+                  key={project.id}
+                  className="border  dark:bg-matcha bg-sage rounded-lg overflow-hidden shadow-xl 2xl:p-2"
+                  style={{ width: '100%', height: 'auto' }}
+                >
+                  <div className="dark:bg-sage bg-cream border-sage border-8 rounded-xl dark:border-matcha">
+                  <div className="h-[107px] w-[175px] mx-auto py-4 ">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      width={300} 
+                      height={500} 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  </div>
+                  <div className="p-4 text-darkbrown dark:text-cream 2xl:p-6">
+                    <h2 className="flex font-Bebas_Neue leading-relaxed text-2xl 2xl:text-3xl mb-2">{project.title}
+                    <FaExternalLinkAlt 
+                    className={`pl-2 xl:size-5 2xl:size-6 cursor-pointer dark:text-sage text-matcha
+                    }`}/></h2>
+                    <div className="flex space-x-2 mb-2">
+                      {project.tags.map((tag, index) => (
+                        <span
+                          key={index}
+                          className="px-2 py-0.5 text-xs font-[600] rounded-full border border-matcha text-cream dark:border-cream dark:text-matcha dark:bg-sage bg-matcha 2xl:text-sm 2xl:px-3"
+                        >
+                          {tag}
+                        </span>
+                      ))}
           </div>
+          <p className="font-IBM_Plex_Mono text-sm 2xl:text-base">{project.description}</p>
+        </div>
+      </div>
+    ))}
+            </div>
+          
 
 
 
