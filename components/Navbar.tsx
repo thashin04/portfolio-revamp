@@ -3,13 +3,14 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { DarkModeSwitch } from "react-toggle-dark-mode";
+import { DarkModeSwitch as OriginalDarkModeSwitch } from "react-toggle-dark-mode";
 import { usePathname } from "next/navigation";
 
 const Navbar: React.FC = () => {
   const [nav, setNav] = useState(false); // State for mobile nav
   const [isDarkMode, setDarkMode] = useState(false); // State for dark mode
   const pathname = usePathname(); // Get current pathname
+  const DarkModeSwitch = OriginalDarkModeSwitch as React.FC<any>;
 
   const handleNav = () => {
     setNav(!nav);
