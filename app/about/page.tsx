@@ -37,9 +37,9 @@ import { useState } from "react";
 function About() {
   const [activeIcon, setActiveIcon] = useState(null);
 
-  // const handleIconClick = (title: string) => {
-  //   setActiveIcon((prev) => (prev === title ? null : title));
-  // };
+  const handleIconClick = (title: string) => {
+    setActiveIcon((prev) => (prev === title ? null : title));
+  };
   return (
     <>
     <div className="flex flex-col py-12 justify-center items-center lg:flex-row lg:w-3/4 mx-auto mt-8 gap-8">
