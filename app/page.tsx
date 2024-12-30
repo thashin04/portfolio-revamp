@@ -93,12 +93,12 @@ function Home() {
     <div className="w-full flex flex-wrap lg:flex-row flex-col lg:px-32 xl:px-48 2xl:px-56 sm:px-8 max-sm:px-8 2xl:max-w-max 2xl:mx-auto space-y-4 lg:space-y-0 lg:space-x-12 pt-2 max-xl:pt-12 xl:pt-20 pb-12 max-lg:pb-4 2xl:pb-24">
       <div className=" text-darkbrown dark:text-cream flex-1 lg:order-1 order-2 lg:pr-12 mx-auto overflow-hidden ">
         <h1 className="leading-tight font-Bebas_Neue md:pb-0 lg:text-left max-sm:pb-4 text-5xl 2xl:text-6xl">
-        HELLO! <br /> I'M{" "}
+        HELLO! <br /> I&#39;M{" "}
             <span className="text-matcha dark:text-sage">{typingText}</span><span className="text-matcha dark:text-sage -mx-2">{cursorVisible ? '|' : ' '}</span>
 
         </h1>
         <p className="leading-relaxed font-IBM_Plex_Mono max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl text-left 2xl:text-2xl 2xl:pt-4 2xl:pb-6">
-          Welcome to my website! I'm an Information Technology Undergrad with a
+          Welcome to my website! I&#39;m an Information Technology Undergrad with a
           minor in Digital Media at the University of Central Florida. I am
           passionate about combining creativity with technology!
         </p>
