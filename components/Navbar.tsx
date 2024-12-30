@@ -10,7 +10,18 @@ const Navbar: React.FC = () => {
   const [nav, setNav] = useState(false); // State for mobile nav
   const [isDarkMode, setDarkMode] = useState(false); // State for dark mode
   const pathname = usePathname(); // Get current pathname
-  const DarkModeSwitch = OriginalDarkModeSwitch as React.FC<any>;
+
+  // Define the proper type for DarkModeSwitch using its props
+  type DarkModeSwitchProps = {
+    checked: boolean;
+    onChange: (checked: boolean) => void;
+    size?: number;
+    moonColor?: string;
+    sunColor?: string;
+    className?: string;
+  };
+
+  const DarkModeSwitch = OriginalDarkModeSwitch as React.FC<DarkModeSwitchProps>;
 
   const handleNav = () => {
     setNav(!nav);

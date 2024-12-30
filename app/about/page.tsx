@@ -35,10 +35,10 @@ import headshot from "../../public/headshot.png";
 import { useState } from "react";
 
 function About() {
-    const [activeIcon, setActiveIcon] = useState<String | null>(null);
+    const [activeIcon, setActiveIcon] = useState<string | null>(null);
 
 
-    const handleIconClick = (title: String) => {
+    const handleIconClick = (title: string) => {
         setActiveIcon((prev) => (prev === title ? null : title));
     };
     return (
