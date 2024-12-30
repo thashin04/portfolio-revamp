@@ -7,11 +7,10 @@ import { DarkModeSwitch as OriginalDarkModeSwitch } from "react-toggle-dark-mode
 import { usePathname } from "next/navigation";
 
 const Navbar: React.FC = () => {
-  const [nav, setNav] = useState(false); // State for mobile nav
-  const [isDarkMode, setDarkMode] = useState(false); // State for dark mode
-  const pathname = usePathname(); // Get current pathname
+  const [nav, setNav] = useState(false); 
+  const [isDarkMode, setDarkMode] = useState(false); 
+  const pathname = usePathname(); 
 
-  // Define the proper type for DarkModeSwitch using its props
   type DarkModeSwitchProps = {
     checked: boolean;
     onChange: (checked: boolean) => void;
@@ -33,7 +32,6 @@ const Navbar: React.FC = () => {
   };
 
   useEffect(() => {
-    // Initialize based on user's system preference
     const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
     setDarkMode(prefersDarkMode);
     document.documentElement.classList.toggle("dark", prefersDarkMode);

@@ -188,7 +188,7 @@ function Home() {
                       {project.tags.map((tag, index) => (
                         <span
                           key={index}
-                          className="px-2 py-0.5 text-xs font-[600] rounded-full border border-matcha text-cream dark:border-cream dark:text-matcha dark:bg-sage bg-matcha 2xl:text-sm 2xl:px-3"
+                          className="px-2 py-0.5 text-xs font-[600] rounded-full border border-sage text-cream dark:border-matcha dark:text-matcha dark:bg-sage bg-matcha 2xl:text-sm 2xl:px-3"
                         >
                           {tag}
                         </span>

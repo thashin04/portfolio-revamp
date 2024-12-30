@@ -12,7 +12,7 @@ function Work() {
       </h1>
       <div className=" px-8 max-w-6xl max-md:max-w-md max-[425px]:max-w-xs  mx-auto 2xl:max-w-screen-xl">
         {/* First Section */}
-        <div className="lg:group lg:hover:scale-105 lg:transition-all lg:duration-300 lg:ease-in lg:bg-cream lg:dark:bg-darkbrown">
+        <div className="lg:group lg:hover:scale-105 2xl:hover:scale-107 lg:transition-all lg:duration-300 lg:ease-in lg:bg-cream lg:dark:bg-darkbrown">
           <hr className="solid mx-auto md:w-10/12" /><br />
           <a href="https://limbitless-solutions.org/" className="cursor-pointer" target="_blank">
             <div className="mx-auto md:w-10/12 flex flex-col md:flex-row-reverse md:space-x-8 md:space-x-reverse pb-8">
@@ -46,7 +46,7 @@ function Work() {
         </div>
 
         {/* Second Section */}
-        <div className="lg:group lg:hover:scale-105 lg:transition-all lg:duration-300 lg:ease-in lg:bg-cream lg:dark:bg-darkbrown">
+        <div className="lg:group lg:hover:scale-105 2xl:hover:scale-107 lg:transition-all lg:duration-300 lg:ease-in lg:bg-cream lg:dark:bg-darkbrown">
           <hr className="solid mx-auto md:w-10/12" /><br />
           <a href="https://osi.ucf.edu/" className="cursor-pointer" target="_blank">
             <div className="mx-auto md:w-10/12 flex flex-col md:flex-row-reverse md:space-x-8 md:space-x-reverse pb-8">
@@ -79,7 +79,7 @@ function Work() {
         </div>
 
         {/* Third Section */}
-        <div className="lg:group lg:hover:scale-105 lg:transition-all lg:duration-300 lg:ease-in lg:bg-cream lg:dark:bg-darkbrown">
+        <div className="lg:group lg:hover:scale-105 2xl:hover:scale-107 lg:transition-all lg:duration-300 lg:ease-in lg:bg-cream lg:dark:bg-darkbrown">
           <hr className="solid mx-auto md:w-10/12" /><br />
           <div className="mx-auto md:w-10/12 flex flex-col md:flex-row-reverse md:space-x-8 md:space-x-reverse pb-8">
             {/* Image Section */}
