@@ -13,7 +13,8 @@ const projects = [
     id: 1,
     title: "Frostfire Serpent",
     tags: ["Game Art"],
-    description: "Bello",
+    description: "Developed during Spookyjam '24, this game features pixel art assets designed in aseprite, including characters, background tiles, and game elements.",
+    description2: "ASEPRITE" ,
     image: "/pumpkin-export-export.png",
   },
   {
@@ -55,11 +56,11 @@ const projects = [
 
 function Home() {
   const [selectedFilter, setSelectedFilter] = useState("All");
-  const [typingText, setTypingText] = useState(""); // State for typing effect
-  const [cursorVisible, setCursorVisible] = useState(true); // State for cursor visibility
-  const fullText = "    THASHIN :)"; // Complete text to display
-  const typingSpeed = 150; // Typing speed in milliseconds
-  const cursorBlinkSpeed = 500; // Cursor blink speed in milliseconds
+  const [typingText, setTypingText] = useState(""); 
+  const [cursorVisible, setCursorVisible] = useState(true); 
+  const fullText = "    THASHIN :)"; 
+  const typingSpeed = 150; 
+  const cursorBlinkSpeed = 500;
 
   const filteredProjects = projects.filter((project) =>
     selectedFilter === "All" || project.tags.includes(selectedFilter)
@@ -76,7 +77,7 @@ function Home() {
       }
     }, typingSpeed);
     
-    return () => clearInterval(typeInterval); // Cleanup on unmount
+    return () => clearInterval(typeInterval); 
   }, []);
 
   useEffect(() => {
@@ -84,7 +85,7 @@ function Home() {
       setCursorVisible((prev) => !prev);
     }, cursorBlinkSpeed);
     
-    return () => clearInterval(blinkInterval); // Cleanup on unmount
+    return () => clearInterval(blinkInterval); 
   }, []);
 
 
@@ -149,7 +150,7 @@ function Home() {
           {["All", "Web Dev", "Game Art", "Design"].map((tag) => (
             <button
               key={tag}
-              className={`px-4 py-1 rounded-full border ${
+              className={`px-4 py-1 duration-300 rounded-full border ${
                 selectedFilter === tag
                   ? "dark:bg-matcha bg-sage text-darkbrown dark:text-cream"
                   : "border-matcha dark:bg-cream bg-darkbrown text-cream dark:text-darkbrown hover:bg-matcha dark:hover:bg-sage hover:text-cream"
@@ -195,6 +196,8 @@ function Home() {
                       ))}
           </div>
           <p className="font-IBM_Plex_Mono text-sm 2xl:text-base">{project.description}</p>
+          <br />
+          <p className="font-Albert_Sans italic text-xs 2xl:text-base">{project.description2}</p>
         </div>
       </div>
     ))}
