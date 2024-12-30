@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className="bg-sage dark:bg-matcha text-darkbrown dark:text-cream p-4 sticky top-0 z-[9999]">
+    <nav className="bg-sage dark:bg-matcha text-darkbrown dark:text-cream p-4 sticky top-0 z-[9999] ">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" className="text-2xl 2xl:text-4xl tracking-wide font-Bebas_Neue">
           THASHIN BHUIYAN
@@ -91,7 +91,7 @@ const Navbar: React.FC = () => {
       </div>
 
       <ul
-        className={`fixed top-0 right-0 w-full h-full bg-sage dark:bg-matcha text-darkbrown dark:text-cream font-IBM_Plex_Mono flex flex-col items-center space-y-6 transform transition-transform duration-500 ${
+        className={`fixed top-0 right-0 w-full h-full bg-sage dark:bg-matcha text-darkbrown dark:text-cream font-IBM_Plex_Mono flex flex-col items-center space-y-6 transform transition-all duration-300 ${
           nav ? "translate-x-0" : "translate-x-full"
         } md:hidden`}
       >

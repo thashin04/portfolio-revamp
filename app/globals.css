@@ -26,8 +26,9 @@
 *{
   transition:
   color .07s,
-  background-color 0.7s;
+  background-color 0.5s;
 }
+
 
 .bebas-neue-regular {
   font-family: "Bebas Neue", sans-serif;
