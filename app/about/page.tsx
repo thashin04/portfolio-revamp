@@ -35,37 +35,10 @@ import headshot from "../../public/headshot.png";
 import { useState } from "react";
 
 function About() {
-    const [activeIcon, setActiveIcon] = useState<IconTitle | null>(null);
+    const [activeIcon, setActiveIcon] = useState<String | null>(null);
 
 
-    type IconTitle =
-        | "HTML"
-        | "CSS"
-        | "JavaScript"
-        | "TypeScript"
-        | "Python"
-        | "C"
-        | "Java"
-        | "Dart"
-        | "React JS"
-        | "Next.JS"
-        | "Angular"
-        | "Tailwind CSS"
-        | "Bootstrap"
-        | "Figma"
-        | "Framer"
-        | "Photoshop"
-        | "Adobe Xd"
-        | "Illustrator"
-        | "InDesign"
-        | "VS Code"
-        | "Wordpress"
-        | "Firebase"
-        | "Vercel"
-        | "Git"
-        | "Github";
-
-    const handleIconClick = (title: IconTitle) => {
+    const handleIconClick = (title: String) => {
         setActiveIcon((prev) => (prev === title ? null : title));
     };
     return (
