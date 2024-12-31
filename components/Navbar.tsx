@@ -103,17 +103,17 @@ const Navbar: React.FC = () => {
           />
         </li>
 
-        <li className="translate-y-16">
+        <li className="translate-y-16 text-darkbrown dark:text-cream">
           <Link href="/" onClick={handleNav} className="text-3xl link-hover">
             HOME
           </Link>
         </li>
-        <li className="translate-y-16">
+        <li className="translate-y-16 text-darkbrown dark:text-cream">
           <Link href="/about" onClick={handleNav} className="text-3xl link-hover">
             ABOUT
           </Link>
         </li>
-        <li className="translate-y-16">
+        <li className="translate-y-16 text-darkbrown dark:text-cream">
           <Link href="/work" onClick={handleNav} className="text-3xl link-hover">
             WORK
           </Link>
@@ -130,19 +130,19 @@ const Navbar: React.FC = () => {
         </li>
 
         <li className="absolute max-[350px]:text-sm bottom-12 ">
-          <a className="footer-name" href="https://www.linkedin.com/in/thashin04/" target="blank">
+          <a className="nav-name" href="https://www.linkedin.com/in/thashin04/" target="blank">
             LINKEDIN
           </a>{" "}
           ·{" "}
-          <a className="footer-name" href="mailto:thashinbhuiyan04@gmail.com" target="blank">
+          <a className="nav-name" href="mailto:thashinbhuiyan04@gmail.com" target="blank">
             EMAIL
           </a>{" "}
           ·{" "}
-          <a className="footer-name" href="https://github.com/thashin04" target="blank">
+          <a className="nav-name" href="https://github.com/thashin04" target="blank">
             GITHUB
           </a>
           ·{" "}
-          <a className="footer-name" href="https://github.com/thashin04" target="blank">
+          <a className="nav-name" href="https://github.com/thashin04" target="blank">
             RESUME
           </a>
         </li>

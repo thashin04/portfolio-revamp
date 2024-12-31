@@ -11,45 +11,47 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 const projects = [
   {
     id: 1,
-    title: "Frostfire Serpent",
-    tags: ["Game Art"],
-    description: "Developed during Spookyjam '24, this game features pixel art assets designed in aseprite, including characters, background tiles, and game elements.",
-    description2: "ASEPRITE" ,
-    image: "/pumpkin-export-export.png",
+    title: "This Site",
+    tags: ["Design", "Web Dev"],
+    description: "Revamped my portfolio website using Next.js with a focus on accessibility, incorporating meaningful design, optimized contrast ratios, screen reader compatibility, and cross-browser functionality. Redesigned the layout and navigation to enhance flow and improve the overall user experience.",
+    description2: "FIGMA, NEXT.JS, TAILWIND CSS, HTML/CSS, JS " ,
+    link:"https://github.com/thashin04/portfolio-revamp",
+    image: "/night.png",
   },
   {
     id: 2,
-    title: "Shipwreck Showdown",
-    tags: ["Game Art"],
-    description: "Yallo",
-    image: "/kraken-goon-export.png",
+    title: "Capistrano Distillery Website",
+    tags: ["Design", "Web Dev"],
+    description: "Developed a website for Capistrano Distillery using React.js, collaborating with a designer to gather client requirements and feedback, and implementing key features like appointment booking.",
+    description2: "FIGMA, REACT.JS, TAILWIND CSS, HTML/CSS, JS " ,
+    link:"https://github.com/thashin04/Capistrano-Distillery-Website",
+    image: "/landing.png",
   },
   {
     id: 3,
-    title: "Old Portfolio",
-    tags: ["Web Dev", "Design"],
-    description: ":3",
-    image: "/fuji-walk-2.gif",
-  },
-  {
-  id: 4,
     title: "Frostfire Serpent",
     tags: ["Game Art"],
-    description: "Bello",
+    description: "Developed during Spookyjam '24. This game features pixel art assets I designed and animated in aseprite, including characters, background tiles, and game elements.",
+    description2: "ASEPRITE" ,
+    link:"https://hypelocomotive.itch.io/frostfire-serpent",
     image: "/pumpkin-export-export.png",
   },
   {
-    id: 5,
+    id: 4,
     title: "Shipwreck Showdown",
     tags: ["Game Art"],
-    description: "Yallo",
+    description: "Best Game winner at Knighthacks VII! I drew and animated all the pixel art assets using aseprite, such as characters, background tiles, and other elements.",
+    description2: "ASEPRITE, UNITY" ,
+    link:"https://devpost.com/software/shipwreck-showdown",
     image: "/kraken-goon-export.png",
   },
   {
-    id: 6,
+    id: 5,
     title: "Old Portfolio",
-    tags: ["Web Dev", "Design"],
-    description: ":3",
+    tags: ["Design","Web Dev"],
+    description: "Developed an E-portfolio site to showcase what I am working on as well as who I am! I used HTML, CSS, and JavaScript.",
+    description2: "HTML/CSS, JS" ,
+    link:"https://github.com/thashin04/E-portfolio",
     image: "/fuji-walk-2.gif",
   },
 ];
@@ -162,29 +164,34 @@ function Home() {
             ))}
           </div>
 
-            <div className="w-full max-sm:mx-auto grid grid-cols-1 font-IBM_Plex_Mono lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-8 px-6 2xl:gap-20 2xl:px-20 2xl:mx-4">
-              {filteredProjects.map((project) => (
-                <div
-                  key={project.id}
-                  className="border  dark:bg-matcha bg-sage rounded-lg overflow-hidden shadow-xl 2xl:p-2"
-                  style={{ width: '100%', height: 'auto' }}
-                >
+          <div className="w-full max-sm:mx-auto grid grid-cols-1 font-IBM_Plex_Mono sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-8 px-6 2xl:gap-10 2xl:px-10 2xl:mx-4 2xl:max-w-[80rem]">
+            {filteredProjects.map((project) => (
+              <div
+                key={project.id}
+                className="relative border dark:bg-matcha bg-sage rounded-lg overflow-hidden shadow-xl 2xl:p-2 lg:hover:-translate-y-2 lg:transition-all lg:duration-300 lg:ease-in"
+                style={{ width: "100%", height: "auto" }}
+              >
+                <a href={project.link} target="_blank">
                   <div className="dark:bg-sage bg-cream border-sage border-8 rounded-xl dark:border-matcha">
-                  <div className="h-[107px] w-[175px] mx-auto py-4 ">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      width={300} 
-                      height={500} 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                    <div className="h-[107px] w-[175px] mx-auto py-4">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        width={300}
+                        height={500}
+                        className="w-full h-full rounded-md object-cover"
+                      />
+                    </div>
                   </div>
                   <div className="p-4 text-darkbrown dark:text-cream 2xl:p-6">
-                    <h2 className="flex font-Bebas_Neue leading-relaxed text-2xl 2xl:text-3xl mb-2">{project.title}
-                    <FaExternalLinkAlt 
-                    className={`pl-2 xl:size-5 2xl:size-6 cursor-pointer dark:text-sage text-matcha
-                    }`}/></h2>
+                  <h2 
+                  className="flex font-Bebas_Neue leading-relaxed text-2xl 2xl:text-4xl mb-2 hover:underline transition-all duration-300 underline-offset-4">
+                  {project.title}
+                  <FaExternalLinkAlt
+                    className="pl-2 xl:size-5 2xl:size-6 cursor-pointer dark:text-sage text-matcha"
+                  />
+                </h2>
+
                     <div className="flex space-x-2 mb-2">
                       {project.tags.map((tag, index) => (
                         <span
@@ -194,14 +201,20 @@ function Home() {
                           {tag}
                         </span>
                       ))}
+                    </div>
+                    <p className="font-IBM_Plex_Mono text-sm pb-2 2xl:text-lg">
+                      {project.description}
+                    </p>
+                    <br />
+                    <p className="font-Albert_Sans italic text-xs 2xl:text-sm absolute bottom-2 left-4 2xl:px-4 2xl:mb-2 pt-2">
+                      {project.description2}
+                    </p>
+                  </div>
+                </a>
+              </div>
+            ))}
           </div>
-          <p className="font-IBM_Plex_Mono text-sm 2xl:text-base">{project.description}</p>
-          <br />
-          <p className="font-Albert_Sans italic text-xs 2xl:text-base">{project.description2}</p>
-        </div>
-      </div>
-    ))}
-            </div>
+
           
 
 
