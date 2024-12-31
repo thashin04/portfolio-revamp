@@ -171,7 +171,7 @@ function Home() {
                 className="relative border dark:bg-matcha bg-sage rounded-lg overflow-hidden shadow-xl 2xl:p-2 lg:hover:-translate-y-2 lg:transition-all lg:duration-300 lg:ease-in"
                 style={{ width: "100%", height: "auto" }}
               >
-                <a href={project.link} target="_blank">
+                
                   <div className="dark:bg-sage bg-cream border-sage border-8 rounded-xl dark:border-matcha">
                     <div className="h-[107px] w-[175px] mx-auto py-4">
                       <Image
@@ -184,6 +184,7 @@ function Home() {
                     </div>
                   </div>
                   <div className="p-4 text-darkbrown dark:text-cream 2xl:p-6">
+                  <a href={project.link} target="_blank">
                   <h2 
                   className="flex font-Bebas_Neue leading-relaxed text-2xl 2xl:text-4xl mb-2 hover:underline transition-all duration-300 underline-offset-4">
                   {project.title}
@@ -191,6 +192,7 @@ function Home() {
                     className="pl-2 xl:size-5 2xl:size-6 cursor-pointer dark:text-sage text-matcha"
                   />
                 </h2>
+                </a>
 
                     <div className="flex space-x-2 mb-2">
                       {project.tags.map((tag, index) => (
@@ -210,7 +212,6 @@ function Home() {
                       {project.description2}
                     </p>
                   </div>
-                </a>
               </div>
             ))}
           </div>
