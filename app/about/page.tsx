@@ -44,7 +44,7 @@ function About() {
     return (
         <>
             <div className="flex flex-col py-12 justify-center items-center lg:flex-row lg:w-3/4 mx-auto mt-8 gap-8">
-                <div className="rounded-lg max-sm:w-1/2 w-1/3 2xl:w-1/4">
+                <div className="rounded-lg max-sm:w-1/2 w-1/3 min-[1300px]:w-3/12 2xl:w-1/4 min-[2000px]:w-2/12">
                     <Image
                         alt="headshot"
                         src={headshot}
@@ -58,7 +58,7 @@ function About() {
 
                 <div className="text-cream lg:px-12 sm:px-8 space-y-0 max-sm:space-y-2 flex flex-col lg:items-start pt-0">
                     <h1 className="pb-2 font-Bebas_Neue text-center lg:text-left text-5xl 2xl:text-6xl dark:text-sage text-matcha">ABOUT ME</h1>
-                    <p className="max-md:mx-12 font-IBM_Plex_Mono leading-relaxed dark:text-cream text-darkbrown xl:max-w-2xl max-xl:max-w-sm text-left 2xl:text-2xl">
+                    <p className="max-md:mx-12 font-IBM_Plex_Mono leading-relaxed dark:text-cream text-darkbrown xl:max-w-2xl max-xl:max-w-sm text-left 2xl:text-xl">
                         I am currently A junior Information Technology Major with my minor in Digital Media at the University of Central Florida. I am always learning to find new ideas to bring accessibility to others. I am currently a <span className='font-bold'>UI/UX intern</span> at <a href="https://limbitless-solutions.org/" target="blank" className="dark:text-sage text-matcha font-bold wavy-decoration"> Limbitless Solutions</a> and a <span className='font-bold'>Web Designer</span> for UCF&#39;s <a href="https://osi.ucf.edu/" target="blank" className="dark:text-sage font-bold text-matcha wavy-decoration"> Office of Student Involvement.</a> In my free time I like to draw, cook, go to new cafes, and play stardew valley!
                     </p>
                     <br />
@@ -93,6 +93,7 @@ function About() {
                     </div>
                 </div>
             </div>
+
 
             <div className="py-8 lg:w-3/4 mx-auto max-sm:pt-0 sm:mt-6">
                 <h1 className="text-5xl 2xl:text-6xl font-Bebas_Neue text-center dark:text-sage text-matcha mb-6">SKILLS</h1>

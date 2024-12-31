@@ -100,12 +100,12 @@ function Home() {
             <span className="text-matcha dark:text-sage">{typingText}</span><span className="text-matcha dark:text-sage -mx-2">{cursorVisible ? '|' : ' '}</span>
 
         </h1>
-        <p className="leading-relaxed font-IBM_Plex_Mono max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl text-left 2xl:text-2xl 2xl:pt-4 2xl:pb-6">
+        <p className="leading-relaxed font-IBM_Plex_Mono max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-xl text-left 2xl:text-xl 2xl:pt-4 2xl:pb-6">
           Welcome to my website! I&#39;m an Information Technology Undergrad with a
           minor in Digital Media at the University of Central Florida. I am
           passionate about combining creativity with technology!
         </p>
-        <div className="flex 2xl:text-2xl space-x-4 pt-6 max-[333px]:text-lg max-sm:mx-auto max-sm:text-sm min-[333px]:flex-wrap">
+        <div className="flex 2xl:text-xl space-x-4 pt-6 max-[333px]:text-lg max-sm:mx-auto max-sm:text-sm min-[333px]:flex-wrap">
           <Link href="/about">
             <button className="duration-300 btn dark:btn rounded-full text-cream bg-matcha dark:bg-sage dark:text-darkbrown font-IBM_Plex_Mono border border-matcha dark:border-sage 2xl:py-2 2xl:px-8 py-1.5 px-6 dark:hover:bg-[#969A6A] hover:bg-[#59671D]">
               ABOUT ME
@@ -148,7 +148,7 @@ function Home() {
         <h1 id="#project-section" className="leading-tight font-Bebas_Neue md:pb-0  lg:text-left text-5xl 2xl:text-6xl">
           PROJECTS
         </h1>
-        <div id="#project-section" className="max-[500px]:grid max-[500px]:w-full gap-4 2xl:text-2xl min-[501px]:space-x-4 px-2 font-IBM_Plex_Mono justify-center mt-4 mb-8 max-[500px]:grid-cols-2 max-[500px]:px-2">
+        <div id="#project-section" className="max-[500px]:grid max-[500px]:w-full gap-4 2xl:text-xl min-[501px]:space-x-4 px-2 font-IBM_Plex_Mono justify-center mt-4 mb-8 max-[500px]:grid-cols-2 max-[500px]:px-2">
           {["All", "Web Dev", "Game Art", "Design"].map((tag) => (
             <button
               key={tag}
@@ -164,11 +164,11 @@ function Home() {
             ))}
           </div>
 
-          <div className="w-full max-sm:mx-auto grid grid-cols-1 font-IBM_Plex_Mono sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-8 px-6 2xl:gap-10 2xl:px-10 2xl:mx-4 2xl:max-w-[80rem]">
+          <div className="w-full max-sm:mx-auto grid grid-cols-1 font-IBM_Plex_Mono sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-8 px-6 2xl:gap-10 2xl:px-0 2xl:mx-4 2xl:max-w-[75rem]">
             {filteredProjects.map((project) => (
               <div
                 key={project.id}
-                className="relative border dark:bg-matcha bg-sage rounded-lg overflow-hidden shadow-xl 2xl:p-2 lg:hover:-translate-y-2 lg:transition-all lg:duration-300 lg:ease-in"
+                className="relative border dark:bg-matcha bg-sage rounded-lg overflow-hidden shadow-xl 2xl:p-1 lg:hover:-translate-y-2 lg:transition-all lg:duration-300 lg:ease-in"
                 style={{ width: "100%", height: "auto" }}
               >
                 

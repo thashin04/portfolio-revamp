@@ -36,7 +36,7 @@ function Work() {
                 <h2 className="flex text-sm 2xl:text-lg font-Albert_Sans italic pb-2 text-matcha dark:text-sage">
                   UX/UI INTERN
                 </h2>
-                <p className="text-sm text-darkbrown dark:text-cream font-IBM_Plex_Mono leading-relaxed 2xl:text-2xl">
+                <p className="text-sm text-darkbrown dark:text-cream font-IBM_Plex_Mono leading-relaxed 2xl:text-xl">
                   Current Intern at Limbitless Solutions, a nonprofit organization at UCF creating personalized 3D-printed prosthetic arms for children. I develop accessible, responsive web projects using <span className="font-bold">HTML, CSS, and WCAG standards</span>, and design UI concepts with <span className="font-bold">Adobe XD</span> to enhance accessibility through technology.
                 </p>
               </div>
@@ -70,7 +70,7 @@ function Work() {
                 <h2 className="flex text-sm 2xl:text-lg font-Albert_Sans italic pb-2 text-matcha dark:text-sage">
                   WEB DESIGNER
                 </h2>
-                <p className="text-sm text-darkbrown dark:text-cream font-IBM_Plex_Mono leading-relaxed 2xl:text-2xl">
+                <p className="text-sm text-darkbrown dark:text-cream font-IBM_Plex_Mono leading-relaxed 2xl:text-xl">
                 Current Web Designer at the Office of Student Involvement (OSI) at UCF. I design and maintain the OSI website for UCF events and campaigns, as well as the Student Government website, using <span className="font-bold">HTML, CSS, Bootstrap, and WordPress</span> to ensure responsive and accessible user interfaces.                </p>
               </div>
             </div>
@@ -102,7 +102,7 @@ function Work() {
               <h2 className="flex text-sm 2xl:text-lg font-Albert_Sans italic pb-2 text-matcha dark:text-sage">
                 CREATIVE DIRECTOR AND FRONT-END LEAD
               </h2>
-              <p className="text-sm text-darkbrown dark:text-cream font-IBM_Plex_Mono leading-relaxed 2xl:text-2xl">
+              <p className="text-sm text-darkbrown dark:text-cream font-IBM_Plex_Mono leading-relaxed 2xl:text-xl">
                 Current Creative Director at ACM. Design digital assets, including flyers, posters, social media graphics, merch, and the UCF ACM chapter website using tools like <span className="font-bold">Photoshop, Figma, and Canva</span>. Organized and led a front-end development workshop series, introducing beginners to front-end development tools, frameworks, etc.
               </p>
             </div>

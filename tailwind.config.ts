@@ -21,6 +21,9 @@ export default {
       IBM_Plex_Mono: ['IBM Plex Mono', 'monospace'],
     },
     extend: {
+      screens: {
+        'min-2000': '2000px',
+    },
       
     },
   },
