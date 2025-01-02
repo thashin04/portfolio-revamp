@@ -19,7 +19,7 @@ const Footer = () => {
           <a className="footer-name" href="https://github.com/thashin04" target="blank">
             GITHUB
           </a><p>{" · "}</p>
-          <a className="footer-name" href="https://github.com/thashin04" target="blank">
+          <a className="footer-name" href="/resume.pdf" target="blank">
             RESUME
           </a>
         </li>

@@ -142,7 +142,7 @@ const Navbar: React.FC = () => {
             GITHUB
           </a>
           ·{" "}
-          <a className="nav-name" href="https://github.com/thashin04" target="blank">
+          <a className="nav-name" href="/resume.pdf" target="blank">
             RESUME
           </a>
         </li>
