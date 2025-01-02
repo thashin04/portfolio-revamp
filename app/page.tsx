@@ -168,7 +168,7 @@ function Home() {
             {filteredProjects.map((project) => (
               <div
                 key={project.id}
-                className="relative border dark:bg-matcha bg-sage rounded-lg overflow-hidden shadow-xl 2xl:p-1 lg:hover:-translate-y-2 lg:transition-all lg:duration-300 lg:ease-in"
+                className="lg:group lg:hover:scale-[1.02] relative border dark:bg-matcha bg-sage rounded-lg overflow-hidden 2xl:p-1 lg:transition-all lg:hover:shadow-darkbrown lg:hover:-translate-y-2 lg:duration-300 lg:ease-in"
                 style={{ width: "100%", height: "auto" }}
               >
                 
@@ -204,7 +204,7 @@ function Home() {
                         </span>
                       ))}
                     </div>
-                    <p className="font-IBM_Plex_Mono text-sm pb-2 2xl:text-lg">
+                    <p className="font-IBM_Plex_Mono leading-normal text-sm pb-2 2xl:text-lg">
                       {project.description}
                     </p>
                     <br />
