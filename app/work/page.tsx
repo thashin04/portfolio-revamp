@@ -96,7 +96,7 @@ function Work() {
             </div>
             {/* Text Section */}
             <div className="md:w-full sm:pr-8 max-md:pt-8">
-              <h2 className="flex hover:underline transition-all duration-300 underline-offset-4 text-xl 2xl:text-2xl font-Albert_Sans pb-2 font-bold text-matcha dark:text-cream">
+              <h2 className="flex transition-all duration-300 underline-offset-4 text-xl 2xl:text-2xl font-Albert_Sans pb-2 font-bold text-matcha dark:text-cream">
                 ASSOCIATION FOR COMPUTING MACHINERY
               </h2>
               <h2 className="flex text-sm 2xl:text-lg font-Albert_Sans italic pb-2 text-matcha dark:text-sage">
