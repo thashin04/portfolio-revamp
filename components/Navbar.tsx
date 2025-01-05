@@ -70,6 +70,15 @@ const Navbar: React.FC = () => {
             WORK
           </Link>
 
+          <Link
+            href="/caseStudies"
+            className={`link-hover transition ${
+              pathname === "/caseStudies" ? "underline underline-offset-[7px]" : ""
+            }`}
+          >
+            CASE STUDIES
+          </Link>
+
           <DarkModeSwitch
             checked={isDarkMode}
             onChange={toggleDarkMode}
@@ -116,6 +125,11 @@ const Navbar: React.FC = () => {
         <li className="translate-y-16 text-darkbrown dark:text-cream">
           <Link href="/work" onClick={handleNav} className="text-3xl link-hover">
             WORK
+          </Link>
+        </li>
+        <li className="translate-y-16 text-darkbrown dark:text-cream">
+          <Link href="/caseStudies" onClick={handleNav} className="text-3xl link-hover">
+            CASE STUDIES
           </Link>
         </li>
 

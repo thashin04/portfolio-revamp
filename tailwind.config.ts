@@ -24,6 +24,15 @@ export default {
       screens: {
         'min-2000': '2000px',
     },
+    animation: {
+      'bounce-arrow': 'bounceArrow 1.5s infinite ease-in-out',
+    },
+    keyframes: {
+      bounceArrow: {
+        '0%, 100%': { transform: 'translateY(0)' },
+        '50%': { transform: 'translateY(-10px)' },
+      },
+    },
       
     },
   },

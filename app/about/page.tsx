@@ -101,7 +101,7 @@ function About() {
                     {/* Languages */}
                     <div className="text-center">
                         <h2 className="text-2xl font-Albert_Sans font-semibold underline pb-3 underline-offset-4 dark:text-sage text-matcha mb-4 inline-block">{`LANGUAGES`}</h2>
-                        <div className="grid grid-cols-4 max-xl:max-w-52 font-semibold mx-auto gap-8 justify-items-center">
+                        <div className="grid grid-cols-4 max-xl:max-w-52 font-semibold mx-auto gap-8 justify-items-center ">
                             {[
                                 { Icon: SiHtml5, title: "HTML" },
                                 { Icon: SiCss3, title: "CSS" },
@@ -120,7 +120,7 @@ function About() {
                                     )}
                                     <Icon
                                         size={24}
-                                        className={`xl:size-6 2xl:size-10 cursor-pointer ${activeIcon === title
+                                        className={`xl:size-6 2xl:size-10 dark:hover:text-sage hover:text-matcha cursor-pointer ${activeIcon === title
                                                 ? "dark:text-sage text-matcha"
                                                 : "dark:text-cream text-darkbrown"
                                             }`}
