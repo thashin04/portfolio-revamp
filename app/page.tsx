@@ -93,7 +93,7 @@ function Home() {
 
   return (
     <>
-    <div className="w-full flex flex-wrap lg:flex-row flex-col lg:px-32 xl:px-48 2xl:px-56 sm:px-8 max-sm:px-8 2xl:max-w-max 2xl:mx-auto space-y-4 lg:space-y-0 lg:space-x-12 pt-2 max-xl:pt-12 xl:pt-20 pb-12 max-lg:pb-4 2xl:pb-24">
+    <div className="w-full flex flex-wrap lg:flex-row flex-col lg:px-32 xl:px-48 2xl:px-56 sm:px-8 max-sm:px-8 2xl:max-w-max 2xl:mx-auto space-y-4 lg:space-y-0  pt-2 max-xl:pt-12 xl:pt-20 pb-12 max-lg:pb-4 2xl:pb-24">
     <div className="order-2 flex justify-center lg:justify-end overflow-hidden">
         <div className="w-full max-w-sm xl:max-w-md 2xl:max-w-xl">
           <Image
