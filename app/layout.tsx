@@ -20,6 +20,7 @@ export default function RootLayout({
         <title>Thashin Bhuiyan</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Welcome to my portfolio website, showcasing various creative and technical projects." />
       </Head>
       <body>
         <Navbar />
