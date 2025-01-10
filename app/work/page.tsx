@@ -3,9 +3,16 @@ import Image from "next/image";
 import limbitless from "../../public/Limbitless Logos_LS Full Primary.svg";
 import osi from "../../public/UILexternal_KGrgb_Office of Student Involvement-72dpi.png"
 import acm from "../../public/acm-logo.png"
+import Head from "next/head";
+
 
 function Work() {
   return (
+    <>
+    <Head>
+        <title>Thashin Bhuiyan | Work</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
     <div className="py-12 dark:bg-darkbrown bg-cream">
       <h1 className="text-5xl max-[425px]:text-4xl 2xl:text-6xl font-Bebas_Neue text-matcha dark:text-sage mb-12 mx-auto text-center">
         WORK AND EXPERIENCE
@@ -111,6 +118,7 @@ function Work() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

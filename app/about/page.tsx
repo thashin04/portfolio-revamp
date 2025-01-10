@@ -31,6 +31,8 @@ import { BsGithub } from 'react-icons/bs';
 import { FaDartLang } from "react-icons/fa6";
 import Image from "next/image";
 import headshot from "../../public/headshot.png";
+import Head from "next/head";
+
 
 import { useState } from "react";
 
@@ -43,6 +45,10 @@ function About() {
     };
     return (
         <>
+        <Head>
+        <title>Thashin Bhuiyan | About</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        </Head>
             <div className="flex flex-col py-12 justify-center items-center lg:flex-row lg:w-3/4 mx-auto mt-8 gap-8">
                 <div className="rounded-lg max-sm:w-1/2 w-1/3 min-[1300px]:w-3/12 2xl:w-1/4 min-[2000px]:w-2/12">
                     <Image
