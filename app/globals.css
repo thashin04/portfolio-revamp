@@ -88,7 +88,7 @@
   transition: ease-out 0.3s;
 }
 .btn-1:hover{
-  box-shadow: inset 0px 50px 0px 0px #BABB9B;
+  box-shadow: 2px 2px 5px #BABB9B;
 }
 
 .dark .btn-1{
