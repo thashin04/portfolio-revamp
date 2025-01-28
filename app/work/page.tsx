@@ -60,7 +60,7 @@ function Work() {
         </AnimationOnScroll>
 
         <AnimationOnScroll
-        classNameInView="opacity-100 translate-y-0 transition-all duration-1000 ease-out"
+        classNameInView="opacity-100 translate-y-0 transition-all duration-1000 sm:delay-100 ease-out"
         classNameNotInView="opacity-0 translate-y-10"
             >
         {/* Second Section */}
@@ -98,7 +98,7 @@ function Work() {
         </AnimationOnScroll>
 
         <AnimationOnScroll
-        classNameInView="opacity-100 translate-y-0 transition-all duration-1000 ease-out"
+        classNameInView="opacity-100 translate-y-0 transition-all duration-1000 sm:delay-350 ease-out"
         classNameNotInView="opacity-0 translate-y-10"
             >
         {/* Third Section */}
