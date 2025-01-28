@@ -5,8 +5,11 @@ import Link from "next/link";
 import Image from "next/image";
 import day from "../public/day.png";
 import night from "../public/night.png";
+import Head from "next/head";
 
 import { FaExternalLinkAlt } from "react-icons/fa";
+import AnimationOnScroll from "../components/AnimationOnScroll";
+
 
 const projects = [
   {
@@ -93,6 +96,15 @@ function Home() {
 
   return (
     <>
+     <AnimationOnScroll
+        classNameInView="opacity-100 translate-y-0 transition-all duration-1000 ease-out"
+        classNameNotInView="opacity-0 translate-y-10"
+      >
+    <Head>
+        <title>Thashin Bhuiyan | Home</title>
+        <meta name="description" content="Welcome to my portfolio website, showcasing various creative and technical projects." />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </Head>
     <div className="w-full flex flex-wrap lg:flex-row flex-col lg:px-32 xl:px-48 2xl:px-56 sm:px-8 max-sm:px-8 2xl:max-w-max 2xl:mx-auto space-y-4 lg:space-y-0  pt-2 max-xl:pt-12 xl:pt-20 pb-12 max-lg:pb-4 2xl:pb-24">
     <div className="order-2 2xl:pl-8 flex justify-center lg:justify-end overflow-hidden">
         <div className="w-full max-w-sm xl:max-w-md 2xl:max-w-xl">
@@ -141,6 +153,7 @@ function Home() {
         </div>
       </div>
     </div>
+    </AnimationOnScroll>
 
     <div className="flex justify-center pt-8 sm:hidden">
       <svg
@@ -188,7 +201,7 @@ function Home() {
       </svg>
     </div>
 
-
+    
     <div className="md:pb-8 w-full flex flex-wrap lg:flex-row flex-col lg:px-32 xl:px-48 2xl:px-56 sm:px-8 max-sm:px-8 2xl:max-w-max 2xl:mx-auto space-y-4 lg:space-y-0 lg:space-x-12 pt-12 xl:pt-100 pb-0">
       <div className=" text-darkbrown dark:text-sage flex-1 lg:order-1 order-2 min-[500px]:mx-auto overflow-hidden ">
         <h1 id="#project-section" className="leading-tight font-Bebas_Neue md:pb-0 pl-4 lg:text-left text-5xl 2xl:text-6xl">
@@ -209,7 +222,10 @@ function Home() {
               </button>
             ))}
           </div>
-
+          <AnimationOnScroll
+        classNameInView="opacity-100 translate-y-0 transition-all duration-1000 ease-out"
+        classNameNotInView="opacity-0 translate-y-10"
+      >
           <div className="w-full max-sm:mx-auto grid grid-cols-1 font-IBM_Plex_Mono sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-8 px-6 2xl:gap-10 2xl:px-0 2xl:mx-4 2xl:max-w-[75rem]">
             {filteredProjects.map((project) => (
               <div
@@ -261,6 +277,7 @@ function Home() {
               </div>
             ))}
           </div>
+          </AnimationOnScroll>
 
           
 

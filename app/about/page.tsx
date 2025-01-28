@@ -35,7 +35,7 @@ import Head from "next/head";
 
 
 import { useState } from "react";
-
+import AnimationOnScroll from "../../components/AnimationOnScroll"
 function About() {
     const [activeIcon, setActiveIcon] = useState<string | null>(null);
 
@@ -49,7 +49,12 @@ function About() {
         <title>Thashin Bhuiyan | About</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         </Head>
+        <AnimationOnScroll
+        classNameInView="opacity-100 translate-y-0 transition-all duration-1000 ease-out"
+        classNameNotInView="opacity-0 translate-y-10"
+            >
             <div className="flex flex-col py-12 justify-center items-center lg:flex-row lg:w-3/4 mx-auto mt-8 gap-8">
+            
                 <div className="rounded-lg max-sm:w-1/2 w-1/3 min-[1300px]:w-3/12 2xl:w-1/4 min-[2000px]:w-2/12">
                     <Image
                         alt="headshot"
@@ -101,12 +106,17 @@ function About() {
                     </div>
                 </div>
             </div>
+            </AnimationOnScroll>
 
 
             <div className="py-8 lg:w-3/4 mx-auto max-sm:pt-0 sm:mt-6">
                 <h1 className="text-5xl 2xl:text-6xl font-Bebas_Neue text-center dark:text-sage text-matcha mb-6">SKILLS</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-20 mx-4 max-sm:mx-16 sm:mx-28">
                     {/* Languages */}
+                    <AnimationOnScroll
+        classNameInView="opacity-100 translate-y-0 transition-all duration-1000 ease-out"
+        classNameNotInView="opacity-0 translate-y-10"
+            >
                     <div className="text-center">
                         <h2 className="text-2xl font-Albert_Sans font-semibold underline pb-3 underline-offset-4 dark:text-sage text-matcha mb-4 inline-block">{`LANGUAGES`}</h2>
                         <div className="grid grid-cols-4 max-xl:max-w-52 font-semibold mx-auto gap-8 justify-items-center ">
@@ -138,8 +148,13 @@ function About() {
                             ))}
                         </div>
                     </div>
+                    </AnimationOnScroll>
 
                     {/* Frameworks */}
+                    <AnimationOnScroll
+        classNameInView="opacity-100 translate-y-0 transition-all duration-1000 ease-out"
+        classNameNotInView="opacity-0 translate-y-10"
+            >
                     <div className="text-center">
                         <h2 className="text-2xl font-Albert_Sans font-semibold underline pb-3 underline-offset-4 dark:text-sage text-matcha mb-4 inline-block">{`FRAMEWORKS`}</h2>
                         <div className="grid grid-cols-3 gap-8 font-semibold max-xl:max-w-52 mx-auto justify-items-center">
@@ -168,8 +183,13 @@ function About() {
                             ))}
                         </div>
                     </div>
+                    </AnimationOnScroll>
 
                     {/* Design/Art */}
+                    <AnimationOnScroll
+        classNameInView="opacity-100 translate-y-0 transition-all duration-1000 ease-out"
+        classNameNotInView="opacity-0 translate-y-10"
+            >
                     <div className="text-center">
                         <h2 className="text-2xl font-Albert_Sans font-semibold pb-3 underline underline-offset-4 dark:text-sage text-matcha mb-4 inline-block">{`DESIGN/ART`}</h2>
                         <div className="grid grid-cols-3 font-semibold gap-8 max-xl:max-w-52 mx-auto justify-items-center">
@@ -199,9 +219,14 @@ function About() {
                             ))}
                         </div>
                     </div>
+                    </AnimationOnScroll>
 
 
                     {/* Tools */}
+                    <AnimationOnScroll
+        classNameInView="opacity-100 translate-y-0 transition-all duration-1000 ease-out"
+        classNameNotInView="opacity-0 translate-y-10"
+            >
                     <div className="text-center">
                         <h2 className="text-2xl font-Albert_Sans pb-3 font-semibold underline underline-offset-4 dark:text-sage text-matcha mb-4 inline-block">{`TOOLS`}</h2>
                         <div className="grid font-semibold grid-cols-3 gap-8 max-xl:max-w-52 mx-auto justify-items-center">
@@ -231,6 +256,7 @@ function About() {
                             ))}
                         </div>
                     </div>
+                    </AnimationOnScroll>
                 </div>
             </div>
 
