@@ -4,6 +4,8 @@ import limbitless from "../../public/Limbitless Logos_LS Full Primary.svg";
 import osi from "../../public/UILexternal_KGrgb_Office of Student Involvement-72dpi.png"
 import acm from "../../public/acm-logo.png"
 import Head from "next/head";
+import AnimationOnScroll from "../../components/AnimationOnScroll"
+
 
 
 function Work() {
@@ -19,6 +21,10 @@ function Work() {
       </h1>
       <div className=" px-8 max-w-6xl max-md:max-w-md max-[425px]:max-w-xs  mx-auto 2xl:max-w-screen-xl">
         {/* First Section */}
+        <AnimationOnScroll
+        classNameInView="opacity-100 translate-y-0 transition-all duration-1000 ease-out"
+        classNameNotInView="opacity-0 translate-y-10"
+            >
         <div className="lg:group lg:hover:scale-105 2xl:hover:scale-107 lg:transition-all lg:duration-300 lg:ease-in lg:bg-cream lg:dark:bg-darkbrown">
           <hr className="solid mx-auto md:w-10/12" /><br />
           <a href="https://limbitless-solutions.org/" className="cursor-pointer" target="_blank">
@@ -51,7 +57,12 @@ function Work() {
           </a>
           <hr className="solid mx-auto md:w-10/12" />
         </div>
+        </AnimationOnScroll>
 
+        <AnimationOnScroll
+        classNameInView="opacity-100 translate-y-0 transition-all duration-1000 ease-out"
+        classNameNotInView="opacity-0 translate-y-10"
+            >
         {/* Second Section */}
         <div className="lg:group lg:hover:scale-105 2xl:hover:scale-107 lg:transition-all lg:duration-300 lg:ease-in lg:bg-cream lg:dark:bg-darkbrown">
           <hr className="solid mx-auto md:w-10/12" /><br />
@@ -84,7 +95,12 @@ function Work() {
           </a>
           <hr className="solid mx-auto md:w-10/12" />
         </div>
+        </AnimationOnScroll>
 
+        <AnimationOnScroll
+        classNameInView="opacity-100 translate-y-0 transition-all duration-1000 ease-out"
+        classNameNotInView="opacity-0 translate-y-10"
+            >
         {/* Third Section */}
         <div className="lg:group lg:hover:scale-105 2xl:hover:scale-107 lg:transition-all lg:duration-300 lg:ease-in lg:bg-cream lg:dark:bg-darkbrown">
           <hr className="solid mx-auto md:w-10/12" /><br />
@@ -116,6 +132,7 @@ function Work() {
           </div>
           <hr className="solid mx-auto md:w-10/12" />
         </div>
+        </AnimationOnScroll>
       </div>
     </div>
     </>
