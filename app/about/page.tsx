@@ -152,7 +152,7 @@ function About() {
 
                     {/* Frameworks */}
                     <AnimationOnScroll
-        classNameInView="opacity-100 translate-y-0 transition-all duration-1000 ease-out"
+        classNameInView="opacity-100 translate-y-0 transition-all duration-1000 sm:delay-200 ease-out"
         classNameNotInView="opacity-0 translate-y-10"
             >
                     <div className="text-center">
@@ -187,7 +187,7 @@ function About() {
 
                     {/* Design/Art */}
                     <AnimationOnScroll
-        classNameInView="opacity-100 translate-y-0 transition-all duration-1000 ease-out"
+        classNameInView="opacity-100 translate-y-0 transition-all duration-1000 sm:delay-350 ease-out"
         classNameNotInView="opacity-0 translate-y-10"
             >
                     <div className="text-center">
@@ -224,7 +224,7 @@ function About() {
 
                     {/* Tools */}
                     <AnimationOnScroll
-        classNameInView="opacity-100 translate-y-0 transition-all duration-1000 ease-out"
+        classNameInView="opacity-100 translate-y-0 transition-all duration-1000 sm:delay-500 ease-out"
         classNameNotInView="opacity-0 translate-y-10"
             >
                     <div className="text-center">

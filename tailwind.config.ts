@@ -24,6 +24,11 @@ export default {
       screens: {
         'min-2000': '2000px',
     },
+    transitionDelay: {
+      '200': '200ms',
+      '350': '350ms',
+      '500': '500ms',
+    },
     animation: {
       'bounce-arrow': 'bounceArrow 1.5s infinite ease-in-out',
     },
