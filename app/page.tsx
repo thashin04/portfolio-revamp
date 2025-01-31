@@ -59,39 +59,68 @@ const projects = [
   },
 ];
 
+
 function Home() {
   const [selectedFilter, setSelectedFilter] = useState("All");
-  const [typingText, setTypingText] = useState(""); 
-  const [cursorVisible, setCursorVisible] = useState(true); 
-  const fullText = "    THASHIN :)"; 
-  const typingSpeed = 150; 
-  const cursorBlinkSpeed = 500;
 
   const filteredProjects = projects.filter((project) =>
     selectedFilter === "All" || project.tags.includes(selectedFilter)
   );
-
+  const [typingText, setTypingText] = useState<string>(""); 
+  const [cursorVisible, setCursorVisible] = useState<boolean>(true);
+  const typingSpeed = 125; 
+  const cursorBlinkSpeed = 525;
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [titleIndex, setTitleIndex] = useState<number>(0);
+  const [charIndex, setCharIndex] = useState<number>(0);
+  const [pause, setPause] = useState<boolean>(false); 
+  const titles: string[] = ["   A UX/UI Designer", "   A Web Developer", "   THASHIN :)"];
+  
   useEffect(() => {
-    let index = 0;
+    if (titleIndex >= titles.length) return;
+  
+    setCursorVisible(true); 
+  
     const typeInterval = setInterval(() => {
-      if (index < fullText.length) {
-        setTypingText((prev) => prev + fullText.charAt(index));
-        index++;
+      if (isDeleting) {
+        if (charIndex > 0) {
+          setTypingText((prev) => prev.slice(0, prev.length - 1));
+          setCharIndex((prev) => prev - 1);
+        } else {
+          if (titleIndex < titles.length - 1) {
+            setIsDeleting(false);
+            setTitleIndex((prevIndex) => prevIndex + 1);
+          }
+        }
       } else {
-        clearInterval(typeInterval);
+        if (charIndex < titles[titleIndex].length) {
+          setTypingText((prev) => prev + titles[titleIndex][charIndex]);
+          setCharIndex((prev) => prev + 1);
+        } else if (!pause && titleIndex < titles.length - 1) {
+          setPause(true);
+          setTimeout(() => {
+            setIsDeleting(true);
+            setPause(false);
+          }, 1000);
+        }
       }
     }, typingSpeed);
-    
-    return () => clearInterval(typeInterval); 
-  }, []);
-
+  
+    return () => clearInterval(typeInterval);
+  }, [charIndex, titleIndex, isDeleting, pause]);
+  
   useEffect(() => {
-    const blinkInterval = setInterval(() => {
-      setCursorVisible((prev) => !prev);
-    }, cursorBlinkSpeed);
-    
-    return () => clearInterval(blinkInterval); 
-  }, []);
+    if (pause || charIndex === titles[titleIndex].length) {
+      const cursorInterval = setInterval(() => {
+        setCursorVisible((prev) => !prev);
+      }, cursorBlinkSpeed);
+  
+      return () => clearInterval(cursorInterval);
+    } else {
+      setCursorVisible(true);
+    }
+  }, [charIndex, pause, titleIndex]);
+  
 
 
   return (
@@ -111,7 +140,7 @@ function Home() {
           <Image
             alt="Day"
             src={day}
-            className="rounded-xl dark:hidden duration-300 transition-opacity opacity-100 dark:opacity-0"
+            className="rounded-3xl dark:hidden duration-300 transition-opacity opacity-100 dark:opacity-0"
             style={{
               width: "100%",
               height: "auto",
@@ -120,7 +149,7 @@ function Home() {
           <Image
             alt="Night"
             src={night}
-            className="rounded-xl hidden dark:list-item duration-300 transition-opacity  opacity-0 dark:opacity-100"
+            className="rounded-3xl hidden dark:list-item duration-300 transition-opacity  opacity-0 dark:opacity-100"
             style={{
               width: "100%",
               height: "auto",
@@ -135,8 +164,8 @@ function Home() {
 
         </h1>
         <p className="leading-relaxed font-IBM_Plex_Mono max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-xl text-left 2xl:text-xl 2xl:pt-4 2xl:pb-6">
-          Welcome to my website! I&#39;m an Information Technology Undergrad with a
-          minor in Digital Media at the University of Central Florida. I am
+          Welcome to my website! I&#39;m an <strong>Information Technology</strong> Undergrad with a
+          minor in <strong>Digital Media</strong> at the <strong>University of Central Florida</strong>. I am
           passionate about combining creativity with technology!
         </p>
         <div className="flex 2xl:text-xl space-x-4 pt-6 max-sm:mx-auto max-sm:justify-center max-sm:text-sm min-[333px]:flex-wrap">

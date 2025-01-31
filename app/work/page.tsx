@@ -50,7 +50,7 @@ function Work() {
                   UX/UI INTERN
                 </h2>
                 <p className="text-sm text-darkbrown dark:text-cream font-IBM_Plex_Mono leading-relaxed 2xl:text-xl">
-                  Current Intern at Limbitless Solutions, a nonprofit organization at UCF creating personalized 3D-printed prosthetic arms for children. I develop accessible, responsive web projects using <span className="font-bold">HTML, CSS, and WCAG standards</span>, and design UI concepts with <span className="font-bold">Adobe XD</span> to enhance accessibility through technology.
+                  Current Intern at Limbitless Solutions, a nonprofit organization at UCF creating personalized 3D-printed prosthetic arms for children. I develop accessible, responsive web projects using <span className="font-bold">HTML, CSS, and WCAG standards</span>, and design UI concepts with <span className="font-bold">Adobe XD</span> and <span className="font-bold">Figma</span> to enhance accessibility through technology.
                 </p>
               </div>
             </div>
