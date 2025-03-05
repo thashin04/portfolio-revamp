@@ -14,15 +14,24 @@ import AnimationOnScroll from "../components/AnimationOnScroll";
 const projects = [
   {
     id: 1,
+    title: "Mend",
+    tags: ["Design", "Web Dev"],
+    description: "Completely rebranded a previous project called Mend, a daily journaling app that integrates AI to analyze entries and provide feedback. I designed the project with a calm user experience in mind by using cool tones, typography, and iterative feedback-driven improvements.",
+    description2: "FIGMA, REACT, VITE, TAILWIND CSS, HTML/CSS, TS " ,
+    link:"https://github.com/ukhan1219/m3nd",
+    image: "/mend.png",
+  },
+  {
+    id: 2,
     title: "This Site",
     tags: ["Design", "Web Dev"],
     description: "Revamped my portfolio website using Next.js with a focus on accessibility, incorporating meaningful design, optimized contrast ratios, screen reader compatibility, and cross-browser functionality. Redesigned the layout and navigation to enhance flow and improve the overall user experience.",
-    description2: "FIGMA, NEXT.JS, TAILWIND CSS, HTML/CSS, JS " ,
+    description2: "FIGMA, NEXT.JS, TAILWIND CSS, HTML/CSS, TS " ,
     link:"https://github.com/thashin04/portfolio-revamp",
     image: "/night.png",
   },
   {
-    id: 2,
+    id: 3,
     title: "Capistrano Distillery Website",
     tags: ["Design", "Web Dev"],
     description: "Developed a website for Capistrano Distillery using React.js, collaborating with a designer to gather client requirements and feedback, and implementing key features like appointment booking.",
@@ -31,7 +40,7 @@ const projects = [
     image: "/landing.png",
   },
   {
-    id: 3,
+    id: 4,
     title: "Frostfire Serpent",
     tags: ["Game Art"],
     description: "Developed during Spookyjam '24. This game features pixel art assets I designed and animated in aseprite, including characters, background tiles, and game elements.",
@@ -40,7 +49,7 @@ const projects = [
     image: "/pumpkin-export-export.png",
   },
   {
-    id: 4,
+    id: 5,
     title: "Shipwreck Showdown",
     tags: ["Game Art"],
     description: "Best Game winner at Knighthacks VII! I drew and animated all the pixel art assets using aseprite, such as characters, background tiles, and other elements.",
@@ -49,7 +58,7 @@ const projects = [
     image: "/kraken-goon-export.png",
   },
   {
-    id: 5,
+    id: 6,
     title: "Old Portfolio",
     tags: ["Design","Web Dev"],
     description: "Developed an E-portfolio site to showcase what I am working on as well as who I am! I used HTML, CSS, and JavaScript.",
@@ -158,7 +167,7 @@ function Home() {
         </div>
       </div>
       <div className=" text-darkbrown max-sm:pt-4 max-lg:pt-8  dark:text-cream flex-1 lg:order-1 order-2 lg:pr-12 mx-auto overflow-hidden ">
-        <h1 className="leading-tight font-Bebas_Neue md:pb-0 lg:text-left max-sm:pb-4 text-5xl 2xl:text-6xl">
+        <h1 className="leading-tight font-Bebas_Neue lg:pb-0 lg:text-left max-lg:pb-2 text-5xl 2xl:text-6xl">
         HELLO! <br /> I&#39;M{" "}
             <span className="text-matcha dark:text-sage">{typingText}</span><span className="text-matcha dark:text-sage -mx-2">{cursorVisible ? '|' : ' '}</span>
 
@@ -168,7 +177,7 @@ function Home() {
           minor in <strong>Digital Media</strong> at the <strong>University of Central Florida</strong>. I am
           passionate about combining creativity with technology!
         </p>
-        <div className="flex 2xl:text-xl space-x-4 pt-6 max-sm:mx-auto max-sm:justify-center max-sm:text-sm min-[333px]:flex-wrap">
+        <div className="flex 2xl:text-xl space-x-4 max-lg:pt-10 pt-6 max-lg:mx-auto max-lg:justify-center max-sm:text-sm min-[333px]:flex-wrap">
           <Link href="/about">
             <button className="duration-300 btn dark:btn rounded-full text-cream bg-matcha dark:bg-sage dark:text-darkbrown font-IBM_Plex_Mono border border-matcha dark:border-sage 2xl:py-2 2xl:px-8 py-1.5 px-6 dark:hover:bg-[#969A6A] hover:bg-[#59671D]">
               ABOUT ME
@@ -184,7 +193,7 @@ function Home() {
     </div>
     </AnimationOnScroll>
 
-    <div className="flex justify-center pt-8 sm:hidden">
+    <div className="flex justify-center pt-10 sm:pt-24 lg:hidden">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 48 48"
@@ -231,16 +240,16 @@ function Home() {
     </div>
 
     
-    <div className="md:pb-8 w-full flex flex-wrap lg:flex-row flex-col lg:px-32 xl:px-48 2xl:px-56 sm:px-8 max-sm:px-8 2xl:max-w-max 2xl:mx-auto space-y-4 lg:space-y-0 lg:space-x-12 pt-12 xl:pt-100 pb-0">
+    <div className="md:pb-8 w-full flex flex-wrap lg:flex-row flex-col sm:px-32 lg:px-32 xl:px-48 2xl:px-56 px-8 2xl:max-w-max 2xl:mx-auto space-y-4 lg:space-y-0 lg:space-x-12 pt-10 xl:pt-100 pb-0">
       <div className=" text-darkbrown dark:text-sage flex-1 lg:order-1 order-2 min-[500px]:mx-auto overflow-hidden ">
-        <h1 id="#project-section" className="leading-tight font-Bebas_Neue md:pb-0 pl-4 lg:text-left text-5xl 2xl:text-6xl">
+        <h1 id="#project-section" className="leading-tight max-md:text-center mx-auto font-Bebas_Neue md:pb-0 lg:text-left text-5xl 2xl:text-6xl">
           PROJECTS
         </h1>
-        <div id="#project-section" className="max-[500px]:grid max-[500px]:w-full gap-4 2xl:text-xl min-[501px]:space-x-4 px-4 font-IBM_Plex_Mono justify-center mt-4 mb-8 max-[500px]:grid-cols-2 max-[500px]:px-2">
+        <div id="#project-section" className="max-md:grid max-md:w-full mx-auto max-lg:justify-center gap-4 2xl:text-xl md:space-x-4 pt-2 font-IBM_Plex_Mono justify-center mt-4 mb-8 max-md:grid-cols-2 max-[500px]:px-2">
           {["All", "Web Dev", "Game Art", "Design"].map((tag) => (
             <button
               key={tag}
-              className={`px-4 py-1 duration-300 rounded-full border ${
+              className={`px-4 py-1 max-lg:py-2 duration-300 rounded-full border ${
                 selectedFilter === tag
                   ? "dark:bg-matcha bg-sage text-darkbrown dark:text-cream"
                   : "border-matcha dark:bg-cream bg-darkbrown text-cream dark:text-darkbrown hover:bg-matcha dark:hover:bg-sage hover:text-cream"
@@ -255,7 +264,7 @@ function Home() {
         classNameInView="opacity-100 translate-y-0 transition-all duration-1000 ease-out"
         classNameNotInView="opacity-0 translate-y-10"
       >
-          <div className="w-full max-sm:mx-auto grid grid-cols-1 font-IBM_Plex_Mono sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-8 px-6 2xl:gap-10 2xl:px-0 2xl:mx-4 2xl:max-w-[75rem]">
+          <div className="w-full max-sm:mx-auto min-[300px]:px-2 min-[425px] min-sm:px-28 grid grid-cols-1 font-IBM_Plex_Mono md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-8 max-md:px-2 2xl:gap-10 2xl:px-0 2xl:mx-4 2xl:max-w-[75rem]">
             {filteredProjects.map((project) => (
               <div
                 key={project.id}

@@ -62,7 +62,7 @@ function Work() {
         </AnimationOnScroll>
 
         <AnimationOnScroll
-        classNameInView="opacity-100 translate-y-0 transition-all duration-1000 ease-out"
+        classNameInView="opacity-100 translate-y-0 transition-all delay-100 duration-1000 ease-out"
         classNameNotInView="opacity-0 translate-y-10"
             >
         <div className="lg:group lg:hover:scale-105 2xl:hover:scale-107 lg:transition-all lg:duration-300 lg:ease-in lg:bg-cream lg:dark:bg-darkbrown">
@@ -87,7 +87,7 @@ function Work() {
                 VIETNAMESE-AMERICAN FOR MUTUAL ASSISTANCE & SERVICES (VAMAS)
                 </h2>
                 <h2 className="flex text-sm 2xl:text-lg font-Albert_Sans italic pb-2 text-matcha dark:text-sage">
-                  WEB DESIGNER <p className="period-padding">{" · "}</p> MAR. 2025 - PRESENT
+                  WEB DESIGNER (CONTRACT) <p className="period-padding">{" · "}</p> MAR. 2025 - PRESENT
                 </h2>
                 <p className="text-sm text-darkbrown dark:text-cream font-IBM_Plex_Mono leading-relaxed 2xl:text-xl">
                   Current Web Designer for VAMAS, a nonprofit organization that empowers the elderly Vietnamese community in Texas by enriching lives through education and bonding. Currently in progress of redesigning the website. 
@@ -138,7 +138,7 @@ function Work() {
         </AnimationOnScroll>
 
         <AnimationOnScroll
-        classNameInView="opacity-100 translate-y-0 transition-all duration-1000 sm:delay-100 ease-out"
+        classNameInView="opacity-100 translate-y-0 transition-all duration-1000 ease-out"
         classNameNotInView="opacity-0 translate-y-10"
             >
         {/* Second Section */}
@@ -176,7 +176,7 @@ function Work() {
         </AnimationOnScroll>
 
         <AnimationOnScroll
-        classNameInView="opacity-100 translate-y-0 transition-all duration-1000 sm:delay-350 ease-out"
+        classNameInView="opacity-100 translate-y-0 transition-all duration-1000 ease-out"
         classNameNotInView="opacity-0 translate-y-10"
             >
         {/* Third Section */}
